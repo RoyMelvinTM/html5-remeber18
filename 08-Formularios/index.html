@@ -6,21 +6,86 @@
 </head>
 <body>
 	<h1>Formulario</h1>
-	<form action=""> <!-- Etiqueta Formulario -->
+	<form> <!-- Etiqueta Formulario -->
+		<fieldset> <!-- permite meter varios campos en un tipo contenedor -->
+			<legend>Datos Personales</legend> <!-- Titulo al Grupo -->
 		<div>
 			<label>
 			Ingrese Nombre
-			<input id="username" name="username">
+			<input id="username" name="username" required>  <!-- elemento "required" campo obligatorio -->
 		</label>
+		</div>
+
+		<div>
+			<label>
+			Ingrese su Correo
+			<input type="email"> <!--  Obligatorio correo con @ -->
+			</label>
+		</fieldset>
+		</div>
+		<fieldset>
+			<legend>Datos de Contacto</legend>
+		<div>
+			<label>
+			Ingrese su Fecha de Naciemiento
+			<input type="date"> <!-- Type DATE para fecha con calendario -->
+			</label>
+		</div>
+		<div>
+			<label>
+			Ingrese Cantidad de Productos
+			<input type="number" value="2" readonly> <!-- Type number para Seleccionar |readonly=campo no editable asignado 2--> 
+			</label>
 		</div>
 		<div>
 			<label>
 			Ingrese Contraseña
-			<input id="password" type="password" name="password">
+			<input id="password" type="password" name="password" required> <!-- elemento REQUIRED campo obligatorio -->
 		</label>
 		</div>
+		</fieldset>
+		<fieldset>
+			<legend>Tus pasa Tiempos</legend>
+			<label>
+				<input type="checkbox"> Deporte <!-- Elemento checkbox Para Seleccion MULTIPLE-->
+			</label>
+			<label>
+				<input type="checkbox"> Leer
+			</label>
+			<label>
+				<input type="checkbox"> Escuchar Musica
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Selecciona tu Sexo</legend> <!-- Elemento radio con genero para UNICA seleccion -->
+			<label><input type="radio" name="genero">Hombre</label>
+			<label><input type="radio" name="genero">Mujer</label>
+			<label><input type="radio" name="genero">No Sabe</label>
+		</fieldset>
+		<fieldset>
+			<legend>Select y Opiniones</legend> <!-- Elemento Select Para Una Lista de Opciones -->
+			<label for="pais">Escoge tu Pais</label>
+			<select name="pais" id="pais">
+				<optgroup label ="America"> <!-- Agrupar OPCIONES --> 
+					<option value="Perú">Perú</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Argentina">Argentina</option>
+					<option value="Uruguayo">Uruguayo</option>
+				</optgroup>
+				<optgroup label ="Europa">
+					<option value="España">España</option>
+					<option value="Francia">Francia</option>
+					<option value="Mexico">Mexico</option>
+				</optgroup>
+				<textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea> <!-- Elemento TEXTAREA es para texto -->
+				
+			</select>
+		</fieldset>
 		<input type="submit" value="Iniciar Sesion"> <!-- ATRIBUTO VALUE: Valor del formulario-->
 		<!-- <button>Enviar</button> -->
+		<div>
+			<input name="username" placeholder="Ingrese Nombre"> <!-- agregar Texto en el cuadro -->
+		</div>
 	</form>
 	<!-- script con captura de teclado (keyup) -->
 	<script>
