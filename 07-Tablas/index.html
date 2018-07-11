@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tablas</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<table >   <!--elemento tabla (BORDER OPCIONAL NO PONER)-->
+	<caption>MI HORARIO DE CLASES</caption>
+	<colgroup>
+		<col span="4">
+		<col style="background: yellow">
+	</colgroup>
+	<thead>
+		<tr>
+			<th>Lunes</th>  <!--celdas CON ENCABEZADO-->
+			<th>Martes</th>
+			<th>Miercoles</th>
+			<th>Jueves</th>
+			<th>Viernes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan	="2">HTML5</td>  <!--celdas AGRUPAR CON ROWSPAN 2 COLUMNAS-->
+			<td>Python</td>
+			<td>CSS3</td>
+			<td rowspan ="2">Django</td>
+			<td>PHP</td>
+		</tr>
+			<tr>
+			<td>UX</td>
+			<td>Algoritmos</td>
+			<td>Saas</td> 
+		</tr>
+		<tr>
+			<td colspan="5">Recreo</td> <!--AGRUPAR celdas/FILAS EN ESTE CASO 5-->
+		</tr>
+		<tr>
+			<td>Java</td>
+			<td>Pass</td>
+			<td>WorPress</td>
+			<td>IA</td>
+			<td>Saas</td> 
+		</tr>
+
+		</tbody>
+		<tfoot>
+			<tr style="background:yellow">
+				<td>3crd</td>
+				<td>4crd</td>
+				<td>4crd</td>
+				<td>2crd</td>
+				<td>1crd</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
