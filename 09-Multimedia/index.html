@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multimedia</title>
+	<style>
+		video {
+			width: 600px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<video src="media/video.mp4" controls poster="media/img.png"></video> <!-- Direccionar Videos y el elemento controls Agrega Controles al Video | poster para imagen-->
+	<audio src="media/audio.mp3" controls></audio> <!-- Agregar Audio -->
+	<button id="play">Play</button> <!-- AGREGAR Botones Play -->
+	<button id="pause">Pause</button>
+	<script>
+		const video = document.getElementById('video');
+		const play = document.getElementById('play');
+		const pause = document.getElementById('pause');
+
+		play.addEventListener('click',() => {
+			video.play();
+		})
+		pause.addEventListener('click',() => {
+			video.pause();
+		})
+
+	</script>
+	 
+</body>
+</html>
